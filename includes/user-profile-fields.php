@@ -47,9 +47,9 @@
 
 		// Update user group
 		if ( isset( $_POST['photoboard_notifications'] ) ) {
-			update_usermeta( $user_id, 'photoboard_get_notifications', 'on' );
+			update_user_meta( $user_id, 'photoboard_get_notifications', 'on' );
 		} else {
-			update_usermeta( $user_id, 'photoboard_get_notifications', 'off' );
+			update_user_meta( $user_id, 'photoboard_get_notifications', 'off' );
 		}
 
 	}
