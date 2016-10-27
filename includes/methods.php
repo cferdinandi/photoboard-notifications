@@ -90,7 +90,7 @@
 
 		// Check if post has notifications enabled
 		$disabled = get_post_meta( $post->ID, 'photoboard_notifications_disable', true );
-		if ( $disabled === 'on' ) return;
+		if ( $disabled === 'on' || isset( $_POST['photoboard_notifications_form_metabox_process'] ) ) return;
 
 		// Variables
 		$users = get_users();
