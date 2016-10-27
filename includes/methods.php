@@ -119,7 +119,7 @@
 
 	}
 	// add_action('save_post', 'photoboard_new_post_email');
-	add_action('draft_to_publish', 'photoboard_new_post_email');
-	add_action('new_to_publish', 'photoboard_new_post_email');
-	add_action('pending_to_publish', 'photoboard_new_post_email');
-	add_action('future_to_publish', 'photoboard_new_post_email');
+	add_action('draft_to_publish', 'photoboard_notifications_new_post_email');
+	add_action('new_to_publish', 'photoboard_notifications_new_post_email');
+	add_action('pending_to_publish', 'photoboard_notifications_new_post_email');
+	add_action('future_to_publish', 'photoboard_notifications_new_post_email');
