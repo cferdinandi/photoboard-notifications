@@ -88,6 +88,10 @@
 		// If post is not published, bail
 		if ( get_post_type( $post->ID ) !== 'post' || get_post_status( $post->ID ) !== 'publish' ) return;
 
+		// Check if post has notifications enabled
+		$disabled = get_post_meta( $post->ID, 'photoboard_notifications_disable', true );
+		if ( $disabled === 'on' ) return;
+
 		// Variables
 		$users = get_users();
 		$headers = Array();
