@@ -7,7 +7,7 @@
 	 */
 	function photoboard_notifications_add_fields( $user ) {
 
-		$notifications = get_the_author_meta( 'photoboard_get_notifications', $user->ID );
+		$notifications = empty($user) || !is_object( $user ) ? null : get_the_author_meta( 'photoboard_get_notifications', $user->ID );
 
 		?>
 
@@ -33,6 +33,7 @@
 	}
 	add_action( 'show_user_profile', 'photoboard_notifications_add_fields' );
 	add_action( 'edit_user_profile', 'photoboard_notifications_add_fields' );
+	add_action( 'user_new_form', 'photoboard_notifications_add_fields' );
 
 
 
@@ -55,3 +56,4 @@
 	}
 	add_action( 'personal_options_update', 'photoboard_notifications_save_fields' );
 	add_action( 'edit_user_profile_update', 'photoboard_notifications_save_fields' );
+	add_action( 'user_register', 'photoboard_notifications_save_fields' );
