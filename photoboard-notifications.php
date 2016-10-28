@@ -5,7 +5,7 @@
  * Plugin URI: https://github.com/cferdinandi/photoboard-notifications
  * GitHub Plugin URI: https://github.com/cferdinandi/photoboard-notifications
  * Description: Add new album notifications to Photoboard
- * Version: 1.2.1
+ * Version: 1.3.0
  * Author: Chris Ferdinandi
  * Author URI: http://gomakethings.com
  * License: All rights reserved
